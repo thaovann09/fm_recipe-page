@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Outfit";
+    src: 
+      local("Outfit"),
+      url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "YoungSerif";
+    src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+:root {
+    --mobile-screen: 375px;
+    --desktop-screen: 1440px;
+
+    --white-color: hsl(0, 0%, 100%);
+
+    --stone-color-100: hsl(30, 54%, 90%);
+    --stone-clor-150: hsl(30, 18%, 87%);
+    --stone-color-600: hsl(30, 10%, 34%);
+    --stone-color-900: hsl(24, 5%, 18%);
+
+    --brown-color-800: hsl(14, 45%, 36%);
+
+    --rose-color-800: hsl(332, 51%, 32%);
+    --rose-color-50: hsl(330, 100%, 98%);
+}
+
+body {
+    padding: 10% 20% 0;
+    margin: 0;
+    background-color: var(--stone-clor-150);
+}
+
+.container {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--white-color);
+    border-radius: 1.25rem;
+    margin: 0 auto; 
+}
+
+.recipe-info {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.omelette-img {
+    padding: 1.5rem;
+}
+.omelette-img > img{
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+h1{
+    font-family: 'YoungSerif', sans-serif;
+    margin: 0;
+}
+
+.preparation-time {
+    background-color: var(--rose-color-50);
+    border-radius: 1.25rem;
+    padding: 3%;
+}
+.preparation-time > h3 {
+    color: var(--rose-color-800);
+    padding: 0;
+    margin: 0;
+}
+.preparation-time > ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin: 15px 15px 0;
+    padding-left: 0.4em;
+}
+
+ul > li{
+    padding-left: 20px;
+}
+
+h2 {
+    color: var(--brown-color-800);
+    font-family: 'YoungSerif';
+}
+
+.ingredients {
+    border-bottom: solid 0.1px var(--brown-color-800);
+}
+.ingredients > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 1.2em;
+}
+.ingredients ul li {
+    list-style-type: square;
+}
+
+.instructions {
+    border-bottom: solid 0.1px var(--brown-color-800);
+}
+.instructions ol li::marker {
+    color: var(--brown-color-800);
+    font-weight: bold;
+}
+.instructions ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nutrition-table {
+    display: flex;
+    flex-direction: column;
+}
+.table-row {
+    display: flex;
+    border-bottom: 0.1px solid var(--stone-clor-150);
+}
+.table-row:last-child {
+    border-bottom: 0;
+}
+.table-head {
+    width: 50%;
+}
+.amount {
+    color: var(--brown-color-800);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        border-radius: 0;
+    }
+    .omelette-img {
+        padding: 0;
+    }
+    .omelette-img > img {
+        border-radius: 0;
+    }
+}
+
+
+
+
